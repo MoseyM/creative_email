@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('register');
 });
+
+Route::post('/validate', 'AjaxController@validateUser');
