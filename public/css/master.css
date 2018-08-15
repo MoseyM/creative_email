@@ -1,50 +1,87 @@
-html, body {
-    background-color: #fff;
-    color: #636b6f;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 100;
-    height: 100vh;
-    margin: 0;
+body, html {
+    border-top: 6px solid #5163BA;
 }
-
-.full-height {
-    height: 100vh;
+a.nav-link {
+    color: #525C67;
+    margin: 10px;
 }
-
-.flex-center {
-    align-items: center;
-    display: flex;
-    justify-content: center;
+.list-inline-item a {
+    color: #525C67;
 }
-
-.position-ref {
-    position: relative;
+#trial-button {
+    width: 100%;
+    background: #F57077;
+    padding: 10px;
+    color: white;
 }
-
-.top-right {
-    position: absolute;
-    right: 10px;
-    top: 18px;
+button.join-button {
+    color: white;
+    background: #F57077;
+    padding-top: 0;
+    padding-bottom: 0;
 }
-
-.content {
+.entice-box {
+	border-radius: 9px;
+	background-color: #FFFFFF;
+    box-shadow: 0 5px 15px 0 rgba(0,0,0,0.07), 0 15px 35px 0 rgba(50,50,93,0.1);
+    padding: 20px;
+}
+.dropdown, #search {
+    display: inline-block;
+    white-space: nowrap;
+}
+#dropdownMenuButton, #search_text {
+    background: transparent;
+    color: black;
+    height: 38px;
+    border: 1px solid #CCCCCC;
+    border-radius: 0;
+    vertical-align: 0;
+}
+#entice-notice {
+    display: inline-block;
+    color: #525C67;
+    font-size: 0.75em;
+    margin-top: 10px;
+    line-height: 0.95;
     text-align: center;
 }
-
-.title {
-    font-size: 84px;
+#search_text {
+    width: 25vw;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-left: none;
 }
-
-.links > a {
-    color: #636b6f;
-    padding: 0 25px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
+#entice-list {
+    margin-bottom: 15px;
 }
-
-.m-b-md {
-    margin-bottom: 30px;
+#entice-list li {
+    list-style: none;
+    background: url('../images/checkmark-lined.svg') no-repeat center left;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+#pro-logo {
+    display: inline-block;
+    width: 55px;
+    height:47px;
+    vertical-align: middle;
+    margin-right: 10px;
+    background: url('../images/pro-mark.svg');
+    background-size: 55px 47px;
+}
+.join-button a.nav-link {
+    color: white;
+    font-weight: bold;
+}
+.search-box {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.search-links {
+    margin-right: 1rem;
+    float: right;
+}
+.center-text{
+    text-align: center;
 }
