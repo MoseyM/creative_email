@@ -15,17 +15,15 @@ These steps were run on Windows Git Bash so generally would work on Mac as well.
 
     ```
     mysql -u root -p
-
     CREATE USER 'admin'@'localhost' IDENTIFIED BY 'xxxxxxxx';
-
     CREATE DATABASE new_database;
-
     GRANT ALL PRIVILEGES ON new_database.* TO 'admin'@'localhost';
     ```
 
 4. Copy `.env.example` to `.env` and edit the database values to use the user and database created in step 3.
 
     ```
+    cd creative_email
     cp .env.example .env
     vi .env
     ```
@@ -39,6 +37,10 @@ These steps were run on Windows Git Bash so generally would work on Mac as well.
     DB_PASSWORD=xxxxxxxx
     ```
     Save and exit
+
+6. Generate a new application key
+
+    `php artisan key:generate`
 
 5. Run the migration
 
