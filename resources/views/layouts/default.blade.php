@@ -30,16 +30,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Sign In</a>
                     </li>
+                    <span class="nav-link">or</span>
                     <li class="nav-item">
-                        <button type="button" class="btn join-button">
-                            <a class="nav-link" href="#">Join Now</a>
-                        </button>
+                        <a class="nav-link" href="{{url('/')}}">
+                            <button type="button" class="btn join-button">Join Now</button>
+                        </a>
                     </li>
                 </ul>
             </div>
         </nav>
         <div class="row search-box">
-            <div class="col-md-6">
+            <div class="col-xs-12 col-sm-12 col-lg-6 col-md-7">
                 <span id="pro-logo"></span>
                 <div class="dropdown">
                     <button 
@@ -63,7 +64,7 @@
                     </form>
                 </div>
             </div>
-            <div class="col-md-6 d-none d-md-block">
+            <div class="col-md-5 d-none d-md-block">
                 <ul class="list-inline search-links">
                     <li class="list-inline-item"><a href="#">Graphics</a></li>
                     <li class="list-inline-item"><a href="#">Fonts</a></li>

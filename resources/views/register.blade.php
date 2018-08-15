@@ -8,6 +8,7 @@
             <li>7 days free</li>        
         </ul>
         <form id="register">
+            @csrf
             <div class="form-group">
                 <input type="email" class="form-control" id="email" aria-describedby="entice-notice" placeholder="Enter your Email Address">
             </div>
@@ -18,19 +19,18 @@
 
 @section('extra-js')
     <script>
-        $('#register').submit(function() {
+        $('#register').submit(function(e) {
+            e.preventDefault();
             var email = $('input#email').val();
             $.ajax({
                 type: "POST",
-                url: "{{ url('/validate') }}",
-                data: { 'email' : email },
-                success: function(msg) {
-                    console.log(msg)
-                    alert(msg);
+                url: "{{ url('/api/validate') }}",
+                headers: {
+                    'X-CSRF-TOKEN': $('input[name="_token"]').val()
                 },
-                error: function(jqXHR, textStatus, errorThrown) { // What to do if we fail
-                    console.log(JSON.stringify(jqXHR));
-                    console.log("AJAX error: " + textStatus + ' : ' + errorThrown);
+                data: { email : email },
+                success: function(data, textStatus, xhr) {
+                    window.location.href = data;
                 }
             });
         });

@@ -1,10 +1,10 @@
 body, html {
     border-top: 6px solid #5163BA;
 }
-a.nav-link {
+.nav-link {
     color: #525C67;
-    margin: 10px;
 }
+span.nav-link {color: #CCCCCC;}
 .list-inline-item a {
     color: #525C67;
 }

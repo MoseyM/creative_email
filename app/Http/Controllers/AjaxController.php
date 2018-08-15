@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Validator;
 
 class AjaxController extends Controller
 {
@@ -11,12 +12,16 @@ class AjaxController extends Controller
      * already exists in the User table.
      * 
      * @param  Request  $request The data to validate
-     * @return Response
+     * @return string
      */
     public function validateUser(Request $request)
     {
-        return $request->validate([
-            'email' => 'unique:users, email',
+        $response = Validator::make($request->all(), [
+            'email' => 'unique:users|email',
         ]);
+
+        $route = url( ($response->fails()) ? '/youExist' : 'https://pro.creativemarket.com/sign-up' );
+
+        return $route;
     }
 }
