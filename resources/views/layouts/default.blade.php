@@ -81,7 +81,7 @@
                 <p>Start your <strong>7-day trial</strong> to access thousands of curated photos, fonts, graphics and more to deliver quality designs faster.</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="entice-row">
             <div class="col-xs-12 col-md-8 offset-md-2 col-lg-4 offset-lg-4 entice-box">
                 @yield('content')
             </div>

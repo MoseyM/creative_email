@@ -26,6 +26,11 @@ button.join-button {
     box-shadow: 0 5px 15px 0 rgba(0,0,0,0.07), 0 15px 35px 0 rgba(50,50,93,0.1);
     padding: 20px;
 }
+#entice-row {
+    background-image: url('../images/free-trial-blob1.svg'), url('../images/free-trial-halftone-circle.svg');
+    background-position: left center, right top;
+    background-repeat: no-repeat, no-repeat;
+}
 .dropdown, #search {
     display: inline-block;
     white-space: nowrap;
